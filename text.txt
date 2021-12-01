@@ -1,49 +1,11 @@
-from tkinter import *
-import datetime
-import socket
-time = datetime.datetime.now()
-ip = socket.gethostbyname(socket.gethostname())
-
-root = Tk()
-root['bg'] = 'black'
-root.title('Messenger, Kamran Pulatov 2021')
-root.geometry('700x600')
-root.resizable(False, False)
-
-def send():
-    inptext = inp.get()
-    now = f"[{time.day}.{time.month}.{time.year}]"
-    text1.insert(1.0, f"[{ip}]: {inptext} - {now}\n")
-    inp.delete(0, "end")
-
-def keyenter(event):
-    btn['bg'] = 'green'
-def nkeyenter(event):
-    btn['bg'] = 'blue'
-
-banner = Label(root, text='Telegraph', bg='black', fg='yellow', font=("Courier New", 30))
-banner.pack()
-
-text = Label(root, text='Enter message:', bg='black', fg='green', font=("Courier New", 20))
-text.pack()
-
-inp = Entry(bg='white', fg='black', font=("Courier New", 20))
-inp.place(x=150, y=90)
-
-btn = Button(text='SEND', bg='blue', fg='black', font=("Courier New", 20), command=send)
-btn.place(x=480, y=90, width=100, height=36)
-btn.bind('<Enter>', keyenter)
-btn.bind('<Leave>', nkeyenter)
-
-text1 = Text(width=67, height=21, font='verdana')
-text1.place(x=5, y=200)
-
-text2 = Label(root, text='Output', bg='black', fg='green', font=("Courier New", 30))
-text2.place(x=280, y=150)
-
-scroll = Scrollbar(command=text1.yview)
-scroll.pack(side=RIGHT, fill=Y)
-scroll.place(in_=text1, relx=1.0, relheight=1.0, bordermode="outside")
-
-text1.config(yscrollcommand=scroll.set)
-root.mainloop()
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+r = b - a 
+a = a - r
+spisok = []
+for i in range(c):
+    a = a + r 
+    spisok.append(a)
+print(spisok[c-1])
