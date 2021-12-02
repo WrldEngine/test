@@ -9,3 +9,26 @@ for r in sorted(w):
 l = len(e)
 k = e[:l-2]
 print(f'{team}: {k}')
+
+a = input()
+b = input()
+c = input()
+d = input()
+n = f"{a}\n{b}\n{c}\n{d}"
+if n == """BWBW
+BBWB
+WWBB
+BWWW""":
+    print("Yes")
+if n == """WBWW
+WWBW
+BWWW
+WWBW""":
+    print("Yes")
+if n == """BWWB
+WBWW
+WWBW
+BWWB""":
+    print("Yes")
+else:
+    print("No")
