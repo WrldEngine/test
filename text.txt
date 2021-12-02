@@ -1,11 +1,11 @@
-a, b, c = input().split()
-a = int(a)
-b = int(b)
-c = int(c)
-r = b - a 
-a = a - r
-spisok = []
-for i in range(c):
-    a = a + r 
-    spisok.append(a)
-print(spisok[c-1])
+team = input()
+name1 = input()
+name2 = input()
+name3 = input()
+w=[name1, name2, name3]
+e=""
+for r in sorted(w):
+    e = e + r + ", "
+l = len(e)
+k = e[:l-2]
+print(f'{team}: {k}')
