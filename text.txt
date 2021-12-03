@@ -32,3 +32,11 @@ BWWB""":
     print("Yes")
 else:
     print("No")
+============    
+x, y, z = input().split()
+x = int(x)
+y = int(y)
+z = int(z)
+
+m = max(x, y, z)
+print(m)
