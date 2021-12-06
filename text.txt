@@ -9,34 +9,81 @@ for r in sorted(w):
 l = len(e)
 k = e[:l-2]
 print(f'{team}: {k}')
-
-a = input()
-b = input()
-c = input()
-d = input()
-n = f"{a}\n{b}\n{c}\n{d}"
-if n == """BWBW
-BBWB
-WWBB
-BWWW""":
-    print("Yes")
-if n == """WBWW
-WWBW
-BWWW
-WWBW""":
-    print("Yes")
-if n == """BWWB
-WBWW
-WWBW
-BWWB""":
-    print("Yes")
-else:
-    print("No")
 ============    
 x, y, z = input().split()
 x = int(x)
 y = int(y)
 z = int(z)
-
 m = max(x, y, z)
 print(m)
+===========
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+m = a/b
+m = str(m)
+l = len(m)
+z = m[2:l]
+c = c - 1
+print(z[c])
+=======
+n = int(input())
+p = n / 3
+v = n / 3
+k = n / 3
+v += (p/2)+(k/2)
+p = p/2
+k = k/2
+k+=(p/2)+(v/2)
+v = v/2
+p = p/2
+p+=(k/2)+(v/2)
+k = k/2
+v = v/2
+p = round(p)
+v = round(v)
+k = round(k)
+print(p, v, k)
+=========
+[Провально]
+n1 = int(input())
+n1=math.fabs(n1)
+r1 = n1
+n2 = 0 
+while n1 > 0:
+    digit = n1 % 10
+    n1 = n1 // 10
+    n2 = n2 * 10
+    n2 = n2 + digit
+d1 = int(input())
+d1 = math.fabs(d1)
+r2 = d1
+d2 = 0 
+while d1 > 0:
+    digit = d1 % 10
+    d1 = d1 // 10
+    d2 = d2 * 10
+    d2 = d2 + digit
+c = max(n2, d2)
+if c == n2:
+    c2 = n2 - r2
+    print(round(c2))
+elif c == d2:
+    c2 = r1 + d2
+    print(round(c2))
+========
+a, b = input().split()
+result = []
+for i in range(1):
+    a = list(a)
+    b = list(b)
+    a.sort()
+    b.sort()
+    result.append(a == b)
+if result[0] == True:
+    print("Yes")
+else:
+    print("No")
+======
+
