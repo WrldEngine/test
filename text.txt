@@ -86,4 +86,61 @@ if result[0] == True:
 else:
     print("No")
 ======
+num, base = input().split()
+num = int(num)
+base = int(base)
+if not(2 <= base <= 9):
+    pass
+newNum = ''
+while num > 0:
+    newNum = str(num % base) + newNum
+    num //= base
+l = len(newNum) 
+x = -1
+z = 0
+c = 1
+for i in range(l):
+    x += 1
+    z = z + int(newNum[x])
+    c = c * int(newNum[x])
+print(c-z)
+======
+z, N = input().split()
+z = int(z)
+N = int(N)
+x = []
+for i in range(z, N) :
+    a = str(i**2)     
+    if a[-len(str(i))] == str(i) :
+        x.append(i)
+d = " ".join(map(str, x))
+print(d)
+======
+n = int(input())
+factors = []
+d = 2
+m = n
+while d * d <= n:
+        if n % d == 0:
+            factors.append(d)
+            n//=d
+        else:
+            d += 1
+factors.append(n)
+print("*".join(map(str, factors))) 
+=======
+ n = int(input())
+if n % 3 == 0:
+    print("2")
+else:
+    print("1") 
+=========
+n, k = input().split()
+n = int(n)
+k = int(k)
+result = 1 + (n-1) * k
+for i in range(k-1):
+    i+=1
+    result += i * (n - 2)
+print(result)
 
