@@ -1,3 +1,147 @@
+n, m = input().split()
+n = int(n)
+m = int(m)
+x = 0
+x1 = 0
+r = 1
+for i in range(n):
+    i += 1
+    i = i % m 
+    x = x + i
+    r += 1
+    r = m % r
+    x1 = x1 + r
+print(x1+x)
+=====
+n = int(input())
+m = []
+for i in range(n):
+    i+=1
+    if n % i == 0:
+        m.append(n/i)
+z = list(set(m))
+m = len(z)
+print(m) 
+=====
+N = int(input())
+if N % 3 == 0:
+    print("2")
+if N % 3 == 1:
+    print("1")
+    print("1")
+if N % 3 == 2:
+    print("1")
+    print("2")
+=====
+a, b = input().split()
+c, d = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+d = int(d)
+if b < a:
+    t = b 
+    b = a 
+    a = t
+if c >= d:
+    t = c
+    c = d 
+else:
+    t = d 
+d2 = (t**2)+(d**2)
+if (d <= a and t <= b or (a * math.sqrt(d2 - (b * b)) + b * math.sqrt(d2 - (a * a))) <= (t * t) - (c * c)):
+    print("Possible")
+else:
+    print("Impossible")
+=====
+n = int(input())
+z = 0
+m = 0
+if n > 1:
+    for i in range(n):
+        a, b, c, d = input().split()
+        a = int(a)
+        b = int(b)
+        c = int(c)
+        d = int(d)
+        AREA = math.fabs(c - a) * math.fabs(d - b)
+        m = AREA
+        z = m - (1/4) * AREA
+        AREA += z
+if n == 1:
+    a, b, c, d = input().split()
+    a = int(a)
+    b = int(b)
+    c = int(c)
+    d = int(d)
+    AREA = math.fabs(c - a) * math.fabs(d - b)
+print(round(AREA))
+====
+n = int(input())
+if n % 2 == 0:
+    n = n // 2
+    b = n * "B"
+    r = n * "R"
+    print(b+r)
+    exit()
+
+if n % 2 == 1:
+    n+=1
+    n = n // 2
+    b = n * "B"
+    r = n * "R"
+    m = b+r
+    l = len(m)
+    print(m[0:l-1])
+====
+n = int(input())
+z = 0
+l = 0
+for i in range(n):
+    z += 1
+    m = math.factorial(z)
+    l += m 
+print(l)
+=====
+n = int(input())
+if n == 1:
+    print("1")
+if n % 3 == 0:
+    d  = n/3
+    s = pow(3, d)
+if n % 3 == 2:
+    d = n/3
+    s = 3 ** d
+if n % 3 == 1:
+    n = n - 4
+    d = n/3
+    s = pow(3, d)
+    s = s * 4
+print(round(s))
+=====
+n = int(input())
+res = 0
+all_date = [0] * (n+1)
+if n != 0 and not(n % 2):
+    all_date[0] = 1
+    all_date[2] = 3
+    if n > 2:
+        all_date[4] = 11
+    for i in range(6, n+1, 2):
+        all_date[i] = 4 *all_date[i-2] - all_date[i-4]
+    
+    res = all_date[n]
+print(res) 
+====
+n, k = input().split()
+n = int(n)
+k = int(k)
+result = 1 + (n-1) * k
+for i in range(k-1):
+    i+=1
+    result += i * (n - 2)
+print(result)
+====
 team = input()
 name1 = input()
 name2 = input()
